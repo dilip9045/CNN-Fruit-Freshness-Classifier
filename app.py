@@ -17,7 +17,10 @@ st.set_page_config(
 # -----------------------------
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("fruit_fresh_rotten_classifier.keras")
+    return tf.keras.models.load_model(
+    "fruit_fresh_rotten_classifier.h5",
+    compile=False
+)
 
 model = load_model()
 
